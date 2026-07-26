@@ -1,0 +1,36 @@
+<mujoco model="dual_shadow_hands_scene">
+  <compiler angle="radian" coordinate="local"/>
+  <option timestep="0.002" gravity="0 0 -9.81"/>
+
+  <visual>
+    <headlight ambient="0.4 0.4 0.4" diffuse="0.6 0.6 0.6" specular="0.3 0.3 0.3"/>
+    <quality shadowsize="4096"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.35 0.4" rgb2="0.1 0.1 0.12" width="512" height="512"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.22 0.25" rgb2="0.15 0.16 0.18" markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+    <material name="silver_mat" specular="0.8" shininess="0.6" reflectance="0.3" rgba="0.82 0.85 0.88 1"/>
+  </asset>
+
+  <!-- Include hand XMLs with unique prefixes -->
+  <include file="shadow_hand/left_hand.xml" prefix="lh_"/>
+  <include file="shadow_hand/right_hand.xml" prefix="rh_"/>
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true" diffuse="0.8 0.8 0.8"/>
+    <light pos="0.5 0.5 1.5" dir="-0.5 -0.5 -1" directional="true" diffuse="0.4 0.4 0.4"/>
+    <geom name="floor" pos="0 0 -0.2" size="1.5 1.5 0.05" type="plane" material="groundplane"/>
+
+    <!-- Left Hand (-0.30 m, facing right +X) -->
+    <body name="left_hand_attachment" pos="-0.30 0 0.1" quat="0.5 0.5 0.5 0.5">
+      <attach body="lh_rh_forearm"/>
+    </body>
+
+    <!-- Right Hand (+0.30 m, facing left -X) -->
+    <body name="right_hand_attachment" pos="0.30 0 0.1" quat="0.5 -0.5 -0.5 0.5">
+      <attach body="rh_rh_forearm"/>
+    </body>
+  </worldbody>
+</mujoco>
