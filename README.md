@@ -33,8 +33,8 @@ python run_mjsim.py --gui
 ```
 
 ## Maintenance & License
-[!WARNING]
 
-**NOTICE:** This repository is provided as-is for educational and research purposes. It is **unmaintained**, and the maintainers assume no responsibility for updates, issue support, or future distributions.
+> [!WARNING]
+> **NOTICE:** This repository is provided as-is for educational and research purposes. It is **unmaintained**, and the maintainers assume no responsibility for updates, issue support, or future distributions.
 
 This project is licensed under the [MIT License](LICENSE).
