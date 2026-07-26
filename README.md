@@ -14,7 +14,7 @@ If running directly on Linux without Docker, ensure Python 3, `pip`, and `venv` 
 sudo apt update
 sudo apt install -y python3-pip python3-venv
 
-![Dual Hands Wave Demo](demo_two_hand_wave/media/your_image_name.png)
+![Dual Hands Wave Demo](demo_two_hand_wave/media/2hands_wave.png)
 
 ## Running the Demo
 ```bash
