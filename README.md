@@ -15,7 +15,7 @@ If running directly on Linux without Docker, ensure Python 3, `pip`, and `venv` 
 
 ```bash
 sudo apt update
-sudo apt install -y python3-pip python3-venv
+sudo apt install -y python3-pip python3-venv libgl1-mesa-glx libglew-dev
 
 # Create and activate virtual environment
 python3 -m venv venv
@@ -31,6 +31,11 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)
 cd demo_two_hand_wave
 python run_mjsim.py --gui
 ```
+
+### Headless / Remote Server Note (Display Warning)
+If someone attempts to run `python run_mjsim.py --gui` over SSH or in WSL2 without X11 forwarding, it will crash. A brief troubleshooting note saves issue submissions:
+
+```markdown
 
 ## Maintenance & License
 
