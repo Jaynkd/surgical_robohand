@@ -1,4 +1,4 @@
-# surgical_robohand
+# Surgical_Robotics_hands
 Robotics hand simulation for surgical robotics
 
 Standalone dexterous robotic hand simulation in MuJoCo for surgical robotics research. Built to evaluate fine contact dynamics, tendon actuation, and micro-grasping of surgical instruments (e.g., suture needles).
