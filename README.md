@@ -31,3 +31,9 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)
 cd demo_two_hand_wave
 python run_mjsim.py --gui
 '''
+
+## Maintenance & License
+
+> **Notice:** This repository is provided as-is for educational and research purposes. It is **unmaintained**, and the maintainers assume no responsibility for updates, issue support, or future distributions.
+
+This project is licensed under the [MIT License](LICENSE).
